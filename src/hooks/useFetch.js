@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const useFetch = (url) => {
+
+const isMontado=useRef(true);
 
 const [estado, setEstado] = useState(
     {
@@ -9,6 +11,13 @@ const [estado, setEstado] = useState(
     error:null
 }
 );
+
+useEffect(()=>{
+  return ()=>{
+    isMontado.current=false;
+  }
+});
+
 
 useEffect(() => {
 //Por cada recuperacion display login
@@ -21,13 +30,14 @@ useEffect(() => {
   fetch(url)
     .then(resp=>resp.json())
     .then(data=>{
+     // if( isMontado.current){
+        setEstado({
+            loading:false,
+            error:null,
+            data
 
-    setEstado({
-        loading:false,
-        error:null,
-        data
-
-    })
+        });
+     // }
   });
   return () => {
     
