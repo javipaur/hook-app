@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { MemoHook } from './components/06-Memos/MemoHook';
+import { CallbackHook } from './components/06-Memos/CallbackHook';
+//import { MemoHook } from './components/06-Memos/MemoHook';
 //import { LayoutEffect } from './components/05-iseLayoutEffect/LayoutEffect';
 //import { Memorize } from './components/06-Memos/Memorize';
 //import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook';
@@ -13,7 +14,7 @@ import { MemoHook } from './components/06-Memos/MemoHook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <MemoHook />
+    <CallbackHook />
 );
 
 
