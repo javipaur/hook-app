@@ -4,6 +4,9 @@ export const useForm = (estadoInicial={}) => {
     //Estado
     const [formvalues, setestadoFormulario] = useState(estadoInicial);
 
+        const reset =()=>{
+            setestadoFormulario(estadoInicial);
+        }
 
         const handlerInputChange = ({target}) =>{
 
@@ -13,5 +16,5 @@ export const useForm = (estadoInicial={}) => {
              });
        }
 
-   return [formvalues,handlerInputChange]; 
+   return [formvalues,handlerInputChange,reset]; 
 }
