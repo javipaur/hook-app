@@ -6,12 +6,12 @@ import { LoginScreen } from './LoginScreen';
 
 export const AppRouter = () => {
   return (
-          <BrowserRouter>
-            <Routes>
-              <Route index element={<HomeScreen />}></Route>
-              <Route path="/about" element={<AboutScreen />}></Route>
-              <Route path="/login" element={<LoginScreen />}></Route>
-            </Routes>
-          </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<HomeScreen />}></Route>
+        <Route path="/about" element={<AboutScreen />}></Route>
+        <Route path="/login" element={<LoginScreen />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
